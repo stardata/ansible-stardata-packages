@@ -1,2 +1,26 @@
 ---
 # tasks file for ansible-stardata-packages
+- name: upgrade the system to the latest stable release
+  yum:
+    name=*
+    state=latest
+- name: install packages we require on all systems
+  yum: name={{ item }} state=latest
+  with_items:
+    - bind-utils
+    - curl
+    - iptraf
+    - libaio
+    - mailx
+    - man
+    - mdadm
+    - mtr
+    - mutt
+    - ntp
+    - openssh-clients
+    - pciutils
+    - rsync
+    - screen
+    - sysstat
+    - vim-enhanced
+    - wget
