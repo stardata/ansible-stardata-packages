@@ -1,5 +1,5 @@
-Role Name
-=========
+Stardata Packages
+=================
 
 This role upgrades the system to the latest stable release and install some packages that we require on all systems.
 
